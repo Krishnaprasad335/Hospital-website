@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}
+doctor page
+{% endblock %}
+{% block content %}
+welcome to dr content page
+<div class="card-group">
+  {% for i in doc %}
+  <!-- <div class="card">
+      <img src="{{i.doc_image.url}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{i.doc_name}}</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div> -->
+
+  <div class="product-categorie-box">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
+        <div >
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+            <div class="products-single fix">
+              <div class="box-img-hover">
+                <div class="type-lb">
+                  <p class="sale">Sale</p>
+                </div>
+                <img src="{{i.doc_image.url}}" class="img-fluid" alt="Image">
+                <div class="mask-icon">
+                  <ul>
+                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i
+                          class="fas fa-eye"></i></a></li>
+                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i
+                          class="fas fa-sync-alt"></i></a></li>
+                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i
+                          class="far fa-heart"></i></a>
+                    </li>
+                  </ul>
+                  <a class="cart" href="#">Add to Cart</a>
+                </div>
+              </div>
+              <div class="why-text">
+                <h4>Lorem ipsum dolor sit amet</h4>
+                <h5> $9.79</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
